@@ -3,6 +3,7 @@ import TopNav from "./header/TopNav";
 import Hero from "./hero/Hero";
 import Popular from "./popular/Popular"
 import Activities from "./activities/Activities"
+import Contact from "./contact/Contact"
 
 export default function App() {
 
@@ -12,6 +13,7 @@ export default function App() {
       <Hero />
 	  <Popular />
 	  <Activities />
+	  <Contact />
     </>
   )
 }

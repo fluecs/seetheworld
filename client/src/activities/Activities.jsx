@@ -10,18 +10,10 @@ import {
 export default function Activities() {
   return (
     <section id="activities" class="activities darker">
+      <div class="glass-blur"></div>
       <h1 class="section-title">Activities</h1>
       <div class="section-divider"></div>
-      <div class="locations">
-        <a class="place place-large" href="view?test">
-          <div>
-            <div class="place-full">
-              <img src="/running.png" />
-            </div>
-            <div class="place-cover"></div>
-            <p class="title2">Running & Jogging</p>
-          </div>
-        </a>
+      <div class="locations infinite-scroll">
         <a class="place place-large" href="view?test">
           <div>
             <div class="place-full">
@@ -53,7 +45,7 @@ export default function Activities() {
       <div class="section-divider"></div>
       <div class="see-more-holder">
         <a class="see-more" href="/locations">
-          See More Locations&nbsp;&nbsp;
+          See More Activities&nbsp;&nbsp;
           <FontAwesomeIcon icon={faArrowRight} />
         </a>
       </div>

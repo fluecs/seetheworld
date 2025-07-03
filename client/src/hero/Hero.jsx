@@ -6,7 +6,7 @@ import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 export default function Hero() {
   return (
     <section id="home" className="hero">
-	  <div class="glass-blur"></div>
+	  <div class="glass-blur hero-sec"></div>
       <div className="hero-content">
         <h1>Discover Your Next Adventure</h1>
         <div className="hero-goals">
