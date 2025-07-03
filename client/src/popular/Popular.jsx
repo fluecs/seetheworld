@@ -1,5 +1,7 @@
 import React from "react";
 import "../App.css";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCalendar, faBuilding, faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
 export default function Popular() {
 	return (
@@ -26,8 +28,8 @@ export default function Popular() {
 							Lorem
 							Ipsum.</p>
 						<span class="price">From €799<span class="higher">99</span></span>
-						<span class="info"><i class="fa-solid fa-calendar"></i> 6 days ⋅ <i
-								class="fa-solid fa-building"></i> Kalamani Salami</span>
+						<span class="info"><FontAwesomeIcon icon={faCalendar} /> 6 days ⋅ 
+								<FontAwesomeIcon icon={faBuilding} /> Kalamani Salami</span>
 					</div>
 				</a>
 				<a class="place" href="view?test">
@@ -49,8 +51,8 @@ export default function Popular() {
 							Lorem
 							Ipsum.</p>
 						<span class="price">From €799<span class="higher">99</span></span>
-						<span class="info"><i class="fa-solid fa-calendar"></i> 6 days ⋅ <i
-								class="fa-solid fa-building"></i> Kalamani Salami</span>
+						<span class="info"><FontAwesomeIcon icon={faCalendar} /> 6 days ⋅ 
+								<FontAwesomeIcon icon={faBuilding} /> Kalamani Salami</span>
 					</div>
 				</a>
 				<a class="place" href="view?test">
@@ -72,14 +74,14 @@ export default function Popular() {
 							Lorem
 							Ipsum.</p>
 						<span class="price">From €799<span class="higher">99</span></span>
-						<span class="info"><i class="fa-solid fa-calendar"></i> 6 days ⋅ <i
-								class="fa-solid fa-building"></i> Kalamani Salami</span>
+						<span class="info"><FontAwesomeIcon icon={faCalendar} /> 6 days ⋅ 
+								<FontAwesomeIcon icon={faBuilding} /> Kalamani Salami</span>
 					</div>
 				</a>
 			</div>
 			<div class="section-divider"></div>
 			<div class="see-more-holder">
-				<a class="see-more" href="/locations">See More Locations</a>
+				<a class="see-more" href="/locations">See More Locations&nbsp;&nbsp;<FontAwesomeIcon icon={faArrowRight}/></a>
 			</div>
 		</section>
 	)
