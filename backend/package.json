@@ -1,0 +1,14 @@
+{
+  "name": "seetheworldbackend",
+  "version": "1.0.0",
+  "description": "Backend for the React frontend for See The World",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ilia Und Die Schaffe",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.1.0"
+  }
+}
