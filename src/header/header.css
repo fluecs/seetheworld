@@ -1,0 +1,90 @@
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #fff;
+  padding: 1.25rem 2rem;
+  color: #222;
+}
+
+.navbar-logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-links li a {
+  color: #222;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.2s;
+}
+
+.navbar-links li a:hover {
+  color: #00bcd4;
+}
+
+body {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+* {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+}
+
+.topnav {
+  background-color: white;
+  box-shadow: 0px 0px 1em black;
+  position: fixed;
+  height: 4em;
+  width: 100%;
+  z-index: 10;
+}
+
+.topnav-wrapper {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: row;
+  top: 0;
+}
+
+.navbutton {
+  height: 3.6em;
+  margin: 0.2em;
+  display: flex;
+  top: 0;
+  color: #777;
+  text-decoration: none;
+}
+
+.navbutton img {
+  height: 100%;
+  margin-right: 1em;
+}
+
+.textbutton {
+  padding-left: .5em;
+  padding-right: .5em;
+}
+
+.textbutton p {
+  font-size: 1.25em;
+}
+
+.current {
+  color: black !important;
+}
