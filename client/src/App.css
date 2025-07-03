@@ -19,15 +19,10 @@ body {
   background-size: cover;
 }
 
-#fsdgsdfgfdg {
-	height: 100000px;
-}
-
 .hero {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 3rem 2rem;
   color: #fff;
   min-height: 75vh;
   position: relative;
@@ -53,6 +48,8 @@ body {
   font-size: 2.8rem;
   margin-bottom: 1rem;
   font-weight: bold;
+  margin-left: 3rem;
+  color: #fff;
 }
 
 .hero-content p {
@@ -68,6 +65,7 @@ body {
   padding: 0rem;
   margin-bottom: 1.5rem;
   box-shadow: 0 0 2rem rgba(0,0,0,1);
+  margin-left: 3rem;
 }
 
 .hero-search-bar input {
@@ -203,6 +201,7 @@ body {
   border-radius: 1rem;
   color: #eee;
   max-width: 600px;
+  margin-left: 3rem;
 }
 .hero-goals strong {
   font-size: 1.15rem;
@@ -229,4 +228,194 @@ bold {
   border-left: 3px solid #eee;
   padding-left: 0.5rem;
   margin: -1.2rem -1.5rem;
+}
+
+.place {
+	box-shadow: 0px 10px 25px #bbb;
+	width: 25em;
+	height: 37.5em;
+	margin: 2.5em;
+	border-radius: 2em;
+	text-decoration: none;
+	transition: 200ms all ease-in-out;
+	position: relative;
+	overflow: hidden;
+	max-width: 33.33%;
+	background-color: white;
+}
+
+.place:hover {
+	scale: 1.05;
+	box-shadow: 0px 10px 25px #444;
+}
+
+.place-top {
+	width: 25em;
+	height: 16em;
+	border-radius: 2em 2em 0 0 ;
+	object-fit: cover;
+	box-shadow: 0px 0px 25px rgba(0,0,0,.1);
+	overflow: hidden;
+}
+
+.place-top img {
+	width: 25em;
+	height: 16em;
+	transition: all 200ms ease-in-out;
+}
+
+.place:hover .place-top img {
+	scale: 1.1;
+}
+
+.title {
+	font-size: 1.25rem;
+	margin: 1.75rem;
+	margin-bottom: .5rem;
+	text-decoration: none;
+	color:black;
+	font-weight: 600;
+}
+
+.desc {
+	margin: 1.75rem;
+	margin-top: 1rem;
+	height: 12.5rem;
+	overflow: hidden;
+	text-align: justify;
+	position: relative;
+	text-decoration: none;
+	color:#999;
+	transition: 200ms all ease-in-out;
+}
+
+.place:hover .desc {
+	color: black;
+}
+
+.desc:before {
+  content:'';
+  width:100%;
+  height:75%;
+  position:absolute;
+  left:0;
+  bottom:0;
+  background:linear-gradient(transparent 1rem, white);
+}
+
+.locations {
+	display: flex;
+	width: 100%;
+	position: relative;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: start;
+	text-align: left;
+}
+
+.price {
+	position: absolute;
+	top: 1em;
+	right: 1em;
+	color: white;
+	padding: .5em;
+	background-color: rgba(52, 152, 219, 0.9);
+	border-radius: 2em;
+	box-shadow: 0px 0px 5px rgba(0,0,0,0.4);
+	font-weight: 600;
+	padding-inline: .75em;
+}
+
+.higher {
+	vertical-align: top;
+	font-size: 60%;
+	font-weight: 600;
+}
+
+.rating {
+	position: absolute;
+	top: 1em;
+	left: 1em;
+	color: white;
+	padding: .5em;
+	background-color: #3498dbe6;
+	border-radius: 2em;
+	box-shadow: 0px 0px 5px rgba(0,0,0,0.4);
+	font-weight: 600;
+	width: 1em;
+	height: 1em;
+	overflow: hidden;
+	white-space: nowrap;
+	transition: all 200ms ease-in-out;
+}
+
+.rating p {
+	display: none;
+}
+
+.place:hover .rating p {
+	display: inline;
+}
+
+.place:hover .rating {
+	width: 4.8em;
+}
+
+.info {
+	color: gray;
+	font-size: .75em;
+	margin: 2.5em;
+	font-weight: 400;
+}
+
+section {
+	width: 100%;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	position: relative;
+}
+
+.section-title {
+	font-weight: 700;
+	font-size: 2.5em;
+	color: #103b66;
+	display: inline-block;
+	margin-top: 3rem;
+}
+
+.section-divider {
+	width: 6em;
+	height: 0.25em;
+	background: linear-gradient(90deg, #3498db 0%, #266d9d 100%);
+	position: absolute;
+	left: calc(50% - 3em);
+	border-radius: 5em;
+}
+
+.see-more {
+	padding: 1rem;
+	padding-inline: 2rem;
+	font-size: 1.25rem;
+	background-color: #3498db;
+	color: white;
+	border-radius: 2em;
+	margin: 3rem;
+	margin-top: 1rem;
+	transition: all 200ms ease-in-out;
+	display: inline-block;
+}
+
+.see-more:hover {
+	scale: 1.05;
+	filter: brightness(1.25);
+}
+
+.see-more-holder {
+	padding-top: 1rem;
+	padding-bottom: 3rem;
+}
+
+.activities {
+	background-color: #efefef;
 }

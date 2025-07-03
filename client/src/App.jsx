@@ -2,6 +2,7 @@ import './App.css'
 import TopNav from "./header/TopNav";
 import Hero from "./hero/Hero";
 import Popular from "./popular/Popular"
+import Activities from "./activities/Activities"
 
 export default function App() {
 
@@ -10,6 +11,7 @@ export default function App() {
       <TopNav />
       <Hero />
 	  <Popular />
+	  <Activities />
     </>
   )
 }
