@@ -67,12 +67,18 @@ body {
 .hero-search-bar {
 	display: flex;
 	align-items: center;
-	background: #fff;
+	background: #eee;
 	border-radius: 2rem;
 	padding: 0rem;
 	margin-bottom: 1.5rem;
-	box-shadow: 0 0 2rem rgba(0, 0, 0, 1);
+	box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 1);
 	margin-left: 3rem;
+	transition: all 200ms ease-in-out;
+}
+
+.hero-search-bar:hover {
+	background-color: #fff;
+	box-shadow: 0 .5rem 2rem rgba(0, 0, 0, 1);
 }
 
 .hero-search-bar input {
@@ -83,6 +89,13 @@ body {
 	font-size: 1rem;
 	flex: 1;
 	margin-left: 1rem;
+	background-color: transparent;
+	color: #777;
+	transition: all 200ms ease-in-out;
+}
+
+.hero-search-bar:hover input {
+	color: #000;
 }
 
 .search-btn {
@@ -512,17 +525,22 @@ section {
 
 .contact-content {
 	display: flex;
+	column-gap: 10rem;
+	row-gap: 5rem;
 	grid-template-columns: 1fr 1fr;
-	gap: 4rem;
 	align-items: center;
-	justify-content: center;
-	width: 70%;
-	left: 15%;
+	width: 80%;
+	left: 10%;
 	margin-top: 3rem;
 	margin-bottom: 3rem;
 	position: relative;
 	text-align: justify;
+	justify-content: center;
 	flex-wrap: wrap;
+}
+
+.contact-content div {
+	flex: 0 0 auto;
 }
 
 .contact-info {
@@ -533,12 +551,18 @@ section {
 	font-size: 2rem;
 	margin-bottom: 1rem;
 	color: #2c3e50;
+	margin-top: 0;
 }
 
 .contact-info p {
-	color: #666;
+	color: #888;
 	margin-bottom: 2rem;
 	line-height: 1.6;
+	transition: all 200ms ease-in-out;
+}
+
+.contact-info:hover p {
+	color: black;
 }
 
 .contact-details {
@@ -567,6 +591,11 @@ section {
 	align-items: center;
 	justify-content: center;
 	color: white;
+	transition: all 200ms ease;
+}
+
+.contact-item:hover i {
+	filter: brightness(1.2);
 }
 
 .contact-item h4 {
@@ -606,6 +635,9 @@ section {
 	background-color: #eee;
 	border: none;
 	color: blacks;
+	box-shadow: 0 3px 5px rgba(0, 0, 0, .2);
+	resize: none;
+	transition: all 200ms ease-in-out;
 }
 
 .form-group select {
@@ -617,10 +649,19 @@ section {
 .form-group textarea:focus {
 	outline: none;
 	border-color: #3498db;
+	background-color: #fff !important;
+	box-shadow: 0 3px 5px rgba(0, 0, 0, .4) !important;
+}
+
+.form-group input:hover,
+.form-group select:hover,
+.form-group textarea:hover {
+	background-color: #f5f5f5;
+	box-shadow: 0 3px 5px rgba(0, 0, 0, .3);
 }
 
 .submit-button {
-	background: linear-gradient(45deg, #27ae60, #2ecc71);
+	background: linear-gradient(45deg, #3498db, #2980b9);
 	color: white;
 	border: none;
 	padding: 15px 30px;
@@ -630,4 +671,9 @@ section {
 	cursor: pointer;
 	transition: all 0.3s ease;
 	width: 100%;
+	box-shadow: 0 3px 5px rgba(0, 0, 0, .2);
+}
+
+.submit-button:hover {
+	filter: brightness(1.25);
 }

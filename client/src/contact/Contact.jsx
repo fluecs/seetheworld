@@ -2,9 +2,10 @@ import React from "react";
 import "../App.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
+  faArrowRight,
   faPhone,
   faEnvelope,
-  faMapMarkerAlt
+  faMapMarkerAlt,
 } from "@fortawesome/free-solid-svg-icons";
 
 export default function Contact() {
@@ -16,26 +17,31 @@ export default function Contact() {
         <div class="contact-info">
           <h3>Let's Plan Your Dream Trip</h3>
           <p>
-            Ready to start your next adventure? Contact us today and let our
-            travel experts help you create the perfect itinerary.
+            Need help with the site or have a question about your booking? Our team is here to assist you! Whether you need support with a booking issue, payment problem, or just want to share your travel dreams, we're just a message away.
           </p>
           <div class="contact-details">
             <div class="contact-item">
-              <i><FontAwesomeIcon icon={faPhone} /></i>
+              <i>
+                <FontAwesomeIcon icon={faPhone} />
+              </i>
               <div>
                 <h4>Phone</h4>
                 <p>+40 630057047</p>
               </div>
             </div>
             <div class="contact-item">
-              <i><FontAwesomeIcon icon={faEnvelope} /></i>
+              <i>
+                <FontAwesomeIcon icon={faEnvelope} />
+              </i>
               <div>
                 <h4>Email</h4>
                 <p>info@seetheworld.com</p>
               </div>
             </div>
             <div class="contact-item">
-              <i><FontAwesomeIcon icon={faMapMarkerAlt} /></i>
+              <i>
+                <FontAwesomeIcon icon={faMapMarkerAlt} />
+              </i>
               <div>
                 <h4>Address</h4>
                 <p>Calea Circumvalațiunii 1, Timișoara 300013, Romania</p>
@@ -65,7 +71,9 @@ export default function Contact() {
             </div>
             <div class="form-group">
               <select id="problem" name="problem">
-                <option value="" selected disabled hidden>Select a reason</option>
+                <option value="" selected disabled hidden>
+                  Select a reason
+                </option>
                 <option value="booking">Booking Issue</option>
                 <option value="payment">Payment Problem</option>
                 <option value="cancellation">Cancellation/Refund</option>
@@ -87,6 +95,13 @@ export default function Contact() {
             </button>
           </form>
         </div>
+      </div>
+      <div class="section-divider"></div>
+      <div class="see-more-holder">
+        <a class="see-more" href="/team">
+          Meet the Team&nbsp;&nbsp;
+          <FontAwesomeIcon icon={faArrowRight} />
+        </a>
       </div>
     </section>
   );
