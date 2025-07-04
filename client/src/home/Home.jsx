@@ -5,6 +5,7 @@ import Hero from "../hero/Hero";
 import Popular from "../popular/Popular";
 import Activities from "../activities/Activities";
 import Contact from "../contact/Contact";
+import Footer from "../footer/Footer";
 
 export default function Home() {
   return (
@@ -14,6 +15,7 @@ export default function Home() {
 	    <Popular />
 	    <Activities />
 	    <Contact />    
+	    <Footer />    
     </>
   )
 }
