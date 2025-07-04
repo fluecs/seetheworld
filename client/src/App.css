@@ -246,7 +246,6 @@ bold {
 }
 
 .place {
-	flex: 0 0 auto;
 	box-shadow: 0px 10px 25px #bbb;
 	width: 25em;
 	height: 37.5em;
@@ -256,7 +255,6 @@ bold {
 	transition: 200ms all ease-in-out;
 	position: relative;
 	overflow: hidden;
-	max-width: 33.33%;
 	background-color: white;
 }
 
@@ -347,13 +345,14 @@ bold {
 
 .locations {
 	display: flex;
-	width: auto;
+	width: 100%;
 	position: relative;
-	flex-wrap: nowrap;
-	overflow-x: auto;
 	justify-content: center;
 	align-items: start;
 	text-align: left;
+	align-self: center;
+	justify-self: center;
+	flex-wrap: wrap;
 }
 
 .price {
@@ -512,13 +511,22 @@ section {
 }
 
 .contact-content {
-	display: grid;
+	display: flex;
 	grid-template-columns: 1fr 1fr;
 	gap: 4rem;
-	align-items: start;
+	align-items: center;
+	justify-content: center;
 	width: 70%;
 	left: 15%;
+	margin-top: 3rem;
+	margin-bottom: 3rem;
 	position: relative;
+	text-align: justify;
+	flex-wrap: wrap;
+}
+
+.contact-info {
+	max-width: 30rem;
 }
 
 .contact-info h3 {
@@ -559,23 +567,26 @@ section {
 	align-items: center;
 	justify-content: center;
 	color: white;
-	font-size: 1.2rem;
 }
 
 .contact-item h4 {
 	color: #2c3e50;
 	margin-bottom: 0.25rem;
+	margin-top: 0;
 }
 
 .contact-item p {
 	color: #666;
 	margin: 0;
+	text-align: left;
 }
 
 .contact-form {
 	background: #f8f9fa;
 	padding: 2rem;
 	border-radius: 15px;
+	box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.4);
+	min-width: 30rem;
 }
 
 .form-group {
@@ -585,13 +596,20 @@ section {
 .form-group input,
 .form-group select,
 .form-group textarea {
-	width: 100%;
-	padding: 12px 15px;
-	border: 2px solid #e9ecef;
+	position: relative;
+	width: calc(100% - 2rem);
+	padding: .75rem 1rem;
 	border-radius: 8px;
 	font-size: 1rem;
 	transition: border-color 0.3s ease;
 	font-family: inherit;
+	background-color: #eee;
+	border: none;
+	color: blacks;
+}
+
+.form-group select {
+	width: 100.5%;
 }
 
 .form-group input:focus,

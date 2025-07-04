@@ -2,9 +2,9 @@ import React from "react";
 import "../App.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faCalendar,
-  faBuilding,
-  faArrowRight,
+  faPhone,
+  faEnvelope,
+  faMapMarkerAlt
 } from "@fortawesome/free-solid-svg-icons";
 
 export default function Contact() {
@@ -21,32 +21,24 @@ export default function Contact() {
           </p>
           <div class="contact-details">
             <div class="contact-item">
-              <i class="fas fa-phone"></i>
+              <i><FontAwesomeIcon icon={faPhone} /></i>
               <div>
                 <h4>Phone</h4>
-                <p>+1 (555) 123-4567</p>
+                <p>+40 630057047</p>
               </div>
             </div>
             <div class="contact-item">
-              <i class="fas fa-envelope"></i>
+              <i><FontAwesomeIcon icon={faEnvelope} /></i>
               <div>
                 <h4>Email</h4>
                 <p>info@seetheworld.com</p>
               </div>
             </div>
             <div class="contact-item">
-              <i class="fas fa-map-marker-alt"></i>
+              <i><FontAwesomeIcon icon={faMapMarkerAlt} /></i>
               <div>
                 <h4>Address</h4>
-                <p>123 Travel Street, Adventure City, AC 12345</p>
-              </div>
-            </div>
-            <div class="contact-item meet-team-item">
-              <i class="fas fa-user"></i>
-              <div>
-                <a href="about.html" class="meet-team-link">
-                  Meet the team
-                </a>
+                <p>Calea Circumvalațiunii 1, Timișoara 300013, Romania</p>
               </div>
             </div>
           </div>
@@ -72,16 +64,8 @@ export default function Contact() {
               />
             </div>
             <div class="form-group">
-              <input
-                type="tel"
-                id="phone"
-                name="phone"
-                placeholder="Your Phone"
-              />
-            </div>
-            <div class="form-group">
               <select id="problem" name="problem">
-                <option value="">Select a problem</option>
+                <option value="" selected disabled hidden>Select a reason</option>
                 <option value="booking">Booking Issue</option>
                 <option value="payment">Payment Problem</option>
                 <option value="cancellation">Cancellation/Refund</option>
