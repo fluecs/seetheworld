@@ -1,0 +1,89 @@
+body {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+* {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+}
+
+.topnav {
+  background-color: white;
+  box-shadow: 0px 0px 1em black;
+  position: fixed;
+  height: 4em;
+  width: 100%;
+  z-index: 1000;
+  overflow: hidden;
+  top: 0;
+}
+
+.topnav-wrapper {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  flex-direction: row;
+  top: 0;
+}
+
+.navbutton {
+  height: 3.6em;
+  margin: 0.2em;
+  display: flex;
+  top: 0;
+  color: #777;
+  text-decoration: none;
+}
+
+.navbutton img {
+  height: 100%;
+  margin-inline: 1em;
+  transition: 200ms all ease-in-out;
+}
+.navbutton:hover img {
+	filter: brightness(1.2);
+}
+
+.textbutton {
+  padding-left: .5em;
+  padding-right: .5em;
+}
+
+.textbutton p {
+  font-size: 1.25em;
+  transition: all 200ms ease-in-out;
+}
+
+.textbutton:hover > p {
+	color: #266d9d;
+}
+
+.textbutton > p::after {
+	display: flex;
+	content: '';
+	position: absolute;
+	bottom: 0;
+	opacity: 0;
+	width: 0;
+	margin-left: 50%;
+	bottom: -.25rem;
+	height: 0.25em;
+	background: linear-gradient(90deg, #3498db 0%, #266d9d 100%);
+	transition: all 200ms ease-in-out;
+	border-radius: 5rem;
+	position: relative;
+}
+
+.textbutton:hover > p::after {
+	opacity: 1;
+	width: calc(100% + 1.5rem);
+	margin-left: -0.75rem;
+}
+
+.current {
+  color: black !important;
+}

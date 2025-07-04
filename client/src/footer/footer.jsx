@@ -11,7 +11,7 @@ const Footer = () => {
       </nav>
 
 <div className="footer-box">
-      <p>&copy; {new Date().getFullYear()} Seetheworld. All rights reserved.</p>
+      <p>&copy; {new Date().getFullYear()} See The World. All rights reserved.</p>
       </div>
     </footer>
   );
