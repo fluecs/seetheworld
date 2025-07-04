@@ -1,26 +1,27 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./header.css";
+
 
 export default function TopNav() {
   return (
     <div className="topnav">
       <div className="topnav-wrapper">
-        <a className="navbutton" href="/">
-          {/* Replace with your logo.png in public/ or src/assets/ */}
+        <Link className="navbutton" to="/">
           <img src="/logo.png" alt="Logo" />
-        </a>
-        <a className="navbutton textbutton" href="#aboutus">
+        </Link>
+        <Link className="navbutton textbutton" to="#aboutus">
           <p>Why Choose Us</p>
-        </a>
-        <a className="navbutton textbutton" href="#destinations">
+        </Link>
+        <Link className="navbutton textbutton" to="#destinations">
           <p>Destinations</p>
-        </a>
-        <a className="navbutton textbutton" href="#activities">
+        </Link>
+        <Link className="navbutton textbutton" to="#activities">
           <p>Activities</p>
-        </a>
-        <a className="navbutton textbutton" href="#contact">
+        </Link>
+        <Link className="navbutton textbutton" to="#contact">
           <p>Contact</p>
-        </a>
+        </Link>
       </div>
     </div>
   );
