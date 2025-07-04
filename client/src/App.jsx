@@ -1,19 +1,17 @@
 import './App.css'
 import TopNav from "./header/TopNav";
-import Hero from "./hero/Hero";
-import Popular from "./popular/Popular"
-import Activities from "./activities/Activities"
-import Contact from "./contact/Contact"
+
+import { Routes, Route } from "react-router-dom";
+import Home from "./home/Home";
 
 export default function App() {
 
   return (
     <>
-      <TopNav />
-      <Hero />
-	  <Popular />
-	  <Activities />
-	  <Contact />
+      <Routes>
+        <Route path="/" element={ <Home /> } />
+        <Route path="/view" element={ <h1>Test</h1>} />
+      </Routes>
     </>
   )
 }

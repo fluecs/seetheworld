@@ -2,18 +2,19 @@ import React from "react";
 import "../App.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCalendar, faBuilding, faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import { Link } from "react-router-dom";
 
 export default function Popular() {
 	return (
-		<section id="destinations" class="popular">
-			<h1 class="section-title">Popular Destinations</h1>
-			<div class="section-divider"></div>
-			<div class="locations">
-				<a class="place" href="view?test">
+		<section id="destinations" className="popular">
+			<h1 className="section-title">Popular Destinations</h1>
+			<div className="section-divider"></div>
+			<div className="locations">
+				<Link className="place" to="view?test">
 					<div>
-						<div class="place-top"><img src="https://live.staticflickr.com/1589/24462693695_f45c0b45f7_h.jpg" /></div>
-						<p class="title">Santorini, Greece</p>
-						<p class="desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+						<div className="place-top"><img src="https://live.staticflickr.com/1589/24462693695_f45c0b45f7_h.jpg" /></div>
+						<p className="title">Santorini, Greece</p>
+						<p className="desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
 							Ipsum
 							has been the industry's standard dummy text ever since the 1500s, when an unknown printer
 							took a
@@ -27,16 +28,16 @@ export default function Popular() {
 							more recently with desktop publishing software like Aldus PageMaker including versions of
 							Lorem
 							Ipsum.</p>
-						<span class="price">From €799<span class="higher">99</span></span>
-						<span class="info"><FontAwesomeIcon icon={faCalendar} /> 6 days ⋅ 
+						<span className="price">From €799<span className="higher">99</span></span>
+						<span className="info"><FontAwesomeIcon icon={faCalendar} /> 6 days ⋅ 
 								<FontAwesomeIcon icon={faBuilding} /> Kalamani Salami</span>
 					</div>
-				</a>
-				<a class="place" href="view?test">
+				</Link>
+				<Link className="place" to="view?test">
 					<div>
-						<div class="place-top"><img src="https://live.staticflickr.com/1589/24462693695_f45c0b45f7_h.jpg" /></div>
-						<p class="title">Santorini, Greece</p>
-						<p class="desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+						<div className="place-top"><img src="https://live.staticflickr.com/1589/24462693695_f45c0b45f7_h.jpg" /></div>
+						<p className="title">Santorini, Greece</p>
+						<p className="desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
 							Ipsum
 							has been the industry's standard dummy text ever since the 1500s, when an unknown printer
 							took a
@@ -50,16 +51,16 @@ export default function Popular() {
 							more recently with desktop publishing software like Aldus PageMaker including versions of
 							Lorem
 							Ipsum.</p>
-						<span class="price">From €799<span class="higher">99</span></span>
-						<span class="info"><FontAwesomeIcon icon={faCalendar} /> 6 days ⋅ 
+						<span className="price">From €799<span className="higher">99</span></span>
+						<span className="info"><FontAwesomeIcon icon={faCalendar} /> 6 days ⋅ 
 								<FontAwesomeIcon icon={faBuilding} /> Kalamani Salami</span>
 					</div>
-				</a>
-				<a class="place" href="view?test">
+				</Link>
+				<Link className="place" to="view?test">
 					<div>
-						<div class="place-top"><img src="https://live.staticflickr.com/1589/24462693695_f45c0b45f7_h.jpg" /></div>
-						<p class="title">Santorini, Greece</p>
-						<p class="desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
+						<div className="place-top"><img src="https://live.staticflickr.com/1589/24462693695_f45c0b45f7_h.jpg" /></div>
+						<p className="title">Santorini, Greece</p>
+						<p className="desc">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
 							Ipsum
 							has been the industry's standard dummy text ever since the 1500s, when an unknown printer
 							took a
@@ -73,15 +74,15 @@ export default function Popular() {
 							more recently with desktop publishing software like Aldus PageMaker including versions of
 							Lorem
 							Ipsum.</p>
-						<span class="price">From €799<span class="higher">99</span></span>
-						<span class="info"><FontAwesomeIcon icon={faCalendar} /> 6 days ⋅ 
+						<span className="price">From €799<span className="higher">99</span></span>
+						<span className="info"><FontAwesomeIcon icon={faCalendar} /> 6 days ⋅ 
 								<FontAwesomeIcon icon={faBuilding} /> Kalamani Salami</span>
 					</div>
-				</a>
+				</Link>
 			</div>
-			<div class="section-divider"></div>
-			<div class="see-more-holder">
-				<a class="see-more" href="/locations">See More Locations&nbsp;&nbsp;<FontAwesomeIcon icon={faArrowRight}/></a>
+			<div className="section-divider"></div>
+			<div className="see-more-holder">
+				<Link className="see-more" to="/locations">See More Locations&nbsp;&nbsp;<FontAwesomeIcon icon={faArrowRight}/></Link>
 			</div>
 		</section>
 	)
