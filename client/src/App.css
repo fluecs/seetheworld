@@ -183,7 +183,7 @@ body {
 	margin-inline: 2.5rem;
 	top: 50%;
 	z-index: 2;
-	text-align: justify;
+	text-align: left;
 }
 
 .floating-card .card-icon {
@@ -352,6 +352,9 @@ bold {
 .locations {
 	display: flex;
 	width: 100%;
+	max-width: 100rem;
+	left: 50%;
+	transform: translateX(-50%);
 	position: relative;
 	justify-content: center;
 	align-items: start;
@@ -669,4 +672,8 @@ section {
 
 .submit-button:hover {
 	filter: brightness(1.25);
+}
+
+section:nth-child(2) {
+	margin-top: 4rem;
 }

@@ -15,7 +15,7 @@ export default function Contact() {
       <div class="section-divider"></div>
       <div class="contact-content">
         <div class="contact-info">
-          <h3>Let's Plan Your Dream Trip</h3>
+          <h3>Connect to our staff</h3>
           <p>
             Need help with the site or have a question about your booking? Our team is here to assist you! Whether you need support with a booking issue, payment problem, or just want to share your travel dreams, we're just a message away.
           </p>
@@ -70,7 +70,7 @@ export default function Contact() {
               />
             </div>
             <div class="form-group">
-              <select id="problem" name="problem">
+              <select id="problem" name="problem" required>
                 <option value="" selected disabled hidden>
                   Select a reason
                 </option>
@@ -86,7 +86,7 @@ export default function Contact() {
               <textarea
                 id="message"
                 name="message"
-                placeholder="Tell us about your dream trip"
+                placeholder="In detail, describe your issue or question"
                 rows="5"
               ></textarea>
             </div>
