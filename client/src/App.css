@@ -352,7 +352,7 @@ bold {
 .locations {
 	display: flex;
 	width: 100%;
-	max-width: 100rem;
+	width: calc(max(100%, 100rem));
 	left: 50%;
 	transform: translateX(-50%);
 	position: relative;
