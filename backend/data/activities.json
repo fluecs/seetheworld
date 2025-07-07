@@ -1,0 +1,26 @@
+[
+  {
+	"id": 1,
+    "name": "Hiking",
+	"img": "https://cdn.britannica.com/08/145408-050-7C11E8B3/Backpacker.jpg",
+	"top": true
+  },
+  {
+	"id": 2,
+    "name": "Skiing",
+	"img": "https://upload.wikimedia.org/wikipedia/commons/8/84/Ski_Famille_-_Family_Ski_Holidays.jpg",
+	"top": true
+  },
+  {
+	"id": 3,
+    "name": "Jogging",
+	"img": "running.png",
+	"top": true
+  },
+  {
+	"id": 4,
+    "name": "Surfing",
+	"img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmZw7n2BKo-6r7RBYdXzqdYADkppJqQKLNwA&s",
+	"top": false
+  }
+]

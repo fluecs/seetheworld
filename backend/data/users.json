@@ -1,0 +1,30 @@
+[
+  {
+	"id": 1,
+    "username": "Hitler",
+    "password": "",
+    "role": "admin",
+    "email": "ilciliadev@gmail.com",
+    "booked": [
+      {
+        "id": 1,
+        "date": "2023-10-01"
+      }
+    ],
+    "createdAt": "2025-07-07T08:07:01.586Z"
+  },
+  {
+    "id": 2,
+    "username": "ilia",
+    "password": "$2b$10$IjZyWbLjMOXUyo.x6h4Kh.10gJsNyvx8So3VyeuvcjOWvUMIbWDXm",
+    "email": "ilciliadev@gmail.com",
+    "role": "admin",
+    "booked": [
+      {
+        "id": 1,
+        "date": "2023-10-01"
+      }
+	],
+    "createdAt": "2025-07-07T08:07:01.586Z"
+  }
+]

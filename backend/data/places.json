@@ -26,5 +26,61 @@
     "host": "Catalunya Adventures",
 	"days": 10,
 	"location": "Premium Tours"
+  },
+  {
+    "id": "3",
+    "title": "Sierra Nevada Ski Resort",
+    "imageURL": "https://live.staticflickr.com/1589/24462693695_f45c0b45f7_h.jpg",
+    "description": "High-altitude skiing and snowboarding near Granada, Spain.",
+    "rating": 4.7,
+    "top": true,
+    "pricePerPerson": 220,
+    "suites": ["Alta Altitude Suite", "Family Mountain Cabin"],
+    "activities": ["Skiing", "Snowboarding"],
+    "host": "Andalusian Winter Tours",
+	"days": 4,
+	"location": "Hitler"
+  },
+  {
+    "id": "4",
+    "title": "Costa Brava Kayak & Beach Stay",
+    "imageURL": "https://i.ytimg.com/vi/hvTMkzquevo/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLAKX8V_-LZTUg-NLzMQSCzjhM7Zbw",
+    "description": "Coastal kayaking and relaxing in charming seaside villages in northeastern Spain.",
+    "rating": 4.5,
+    "top": false,
+    "pricePerPerson": 160,
+    "suites": ["Beachfront Bungalow", "Mediterranean Suite"],
+    "activities": ["Kayaking", "Surfing"],
+    "host": "Catalunya Adventures",
+	"days": 10,
+	"location": "Premium Tours"
+  },
+  {
+    "id": "5",
+    "title": "Sierra Nevada Ski Resort",
+    "imageURL": "https://live.staticflickr.com/1589/24462693695_f45c0b45f7_h.jpg",
+    "description": "High-altitude skiing and snowboarding near Granada, Spain.",
+    "rating": 4.7,
+    "top": true,
+    "pricePerPerson": 220,
+    "suites": ["Alta Altitude Suite", "Family Mountain Cabin"],
+    "activities": ["Skiing", "Snowboarding"],
+    "host": "Andalusian Winter Tours",
+	"days": 4,
+	"location": "Hitler"
+  },
+  {
+    "id": "6",
+    "title": "Costa Brava Kayak & Beach Stay",
+    "imageURL": "https://i.ytimg.com/vi/hvTMkzquevo/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLAKX8V_-LZTUg-NLzMQSCzjhM7Zbw",
+    "description": "Coastal kayaking and relaxing in charming seaside villages in northeastern Spain.",
+    "rating": 4.5,
+    "top": false,
+    "pricePerPerson": 160,
+    "suites": ["Beachfront Bungalow", "Mediterranean Suite"],
+    "activities": ["Kayaking", "Surfing"],
+    "host": "Catalunya Adventures",
+	"days": 10,
+	"location": "Premium Tours"
   }
 ]

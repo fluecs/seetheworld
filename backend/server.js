@@ -1,13 +1,17 @@
 const express = require('express');
-const cors = require("cors");
 const app = express();
+const cors = require('cors');
 
-// Include route files
+app.use(cors());               // ← allow all origins by default
+app.use(express.json()); // you missed this in what you pasted, required for parsing JSON bodies
+
 const usersRoute = require('./routes/list');
+const authRoute = require('./routes/users');
+const actRoute = require('./routes/activity');
 
-app.use(cors({ origin: "http://localhost:5173" }));
-
-// Use routes
 app.use('/api', usersRoute);
+app.use('/api/act', actRoute);
+app.use('/auth', authRoute);
 
-app.listen(3000)
+console.log('Starting server...');
+app.listen(3000, () => console.log('Server running at http://localhost:3000'));

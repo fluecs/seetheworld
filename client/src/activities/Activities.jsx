@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "../App.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -6,41 +6,46 @@ import {
   faBuilding,
   faArrowRight,
 } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 
 export default function Activities() {
+  const [places, setPlaces] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    fetch("http://localhost:3000/api/act/list?top")
+      .then((res) => res.json())
+      .then((data) => {
+        setPlaces(data.data || []);
+        setLoading(false);
+      })
+      .catch((err) => {
+        console.error("Failed to fetch places", err);
+        setLoading(false);
+      });
+  }, []);
+
   return (
     <section id="activities" class="activities darker">
       <div class="glass-blur"></div>
       <h1 class="section-title">Activities</h1>
       <div class="section-divider"></div>
       <div class="locations infinite-scroll">
-        <a class="place place-large" href="view?test">
-          <div>
-            <div class="place-full">
-              <img src="/running.png" />
+        {places.map((place, idx) => (
+          <Link
+            className="place place-large"
+            to={`/act?id=${place.id}`}
+            key={place.id || idx}
+          >
+            <div>
+              <div class="place-full">
+                <img src={place.img} />
+              </div>
+              <div class="place-cover"></div>
+              <p class="title2">{place.name}</p>
             </div>
-            <div class="place-cover"></div>
-            <p class="title2">Running & Jogging</p>
-          </div>
-        </a>
-        <a class="place place-large" href="view?test">
-          <div>
-            <div class="place-full">
-              <img src="/running.png" />
-            </div>
-            <div class="place-cover"></div>
-            <p class="title2">Running & Jogging</p>
-          </div>
-        </a>
-        <a class="place place-large" href="view?test">
-          <div>
-            <div class="place-full">
-              <img src="/running.png" />
-            </div>
-            <div class="place-cover"></div>
-            <p class="title2">Running & Jogging</p>
-          </div>
-        </a>
+          </Link>
+        ))}
       </div>
       <div class="section-divider"></div>
       <div class="see-more-holder">
