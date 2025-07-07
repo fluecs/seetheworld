@@ -13,6 +13,7 @@ export default function Locations() {
     <>
     <TopNav />   
 	<AllDest /> 
+	<Footer />
     </>
   )
 }

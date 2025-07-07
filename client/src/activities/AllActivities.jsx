@@ -9,12 +9,12 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 
-export default function Activities() {
+export default function AllActivities() {
   const [places, setPlaces] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch("http://localhost:3000/api/act/list?top")
+    fetch("http://localhost:3000/api/act/list")
       .then((res) => res.json())
       .then((data) => {
         setPlaces(data.data || []);
@@ -44,16 +44,10 @@ export default function Activities() {
               </div>
               <div class="place-cover"></div>
               <p class="title2">{place.name}</p>
+						  {place.top ? <span class="rating"><FontAwesomeIcon icon={faFire} /><p> Popular</p></span> : ""}
             </div>
           </Link>
         ))}
-      </div>
-      <div class="section-divider"></div>
-      <div class="see-more-holder">
-        <a class="see-more" href="/activities">
-          See More Activities&nbsp;&nbsp;
-          <FontAwesomeIcon icon={faArrowRight} />
-        </a>
       </div>
     </section>
   );
