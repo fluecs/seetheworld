@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const cors = require('cors');
 
-const port = 8080;
+const port = process.env.PORT || 8080;
 
 app.use(cors());               // ← allow all origins by default
 app.use(express.json()); // you missed this in what you pasted, required for parsing JSON bodies
