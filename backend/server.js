@@ -16,4 +16,4 @@ app.use('/api/act', actRoute);
 app.use('/auth', authRoute);
 
 console.log('Starting server...');
-app.listen(port, () => console.log('Server running at port ' + port));
+module.exports = app;
