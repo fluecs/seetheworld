@@ -14,7 +14,7 @@ export default function AllActivities() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch("http://localhost:3000/api/act/list")
+    fetch("https://seetheworld-4ojo.onrender.com/api/act/list")
       .then((res) => res.json())
       .then((data) => {
         setPlaces(data.data || []);

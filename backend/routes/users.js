@@ -24,7 +24,7 @@ function saveUsers(users) {
 }
 
 // 📝 Register
-router.get('/register', async (req, res) => {
+router.post('/register', async (req, res) => {
   const { username, password, email } = req.body;
 
   if (!username || !password || !email) {
@@ -56,7 +56,7 @@ router.get('/register', async (req, res) => {
 });
 
 // 🔐 Login
-router.get('/login', async (req, res) => {
+router.post('/login', async (req, res) => {
   const { username, password } = req.body;
 
   if (!username || !password) {

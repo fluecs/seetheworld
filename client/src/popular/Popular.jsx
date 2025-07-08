@@ -13,7 +13,7 @@ export default function Popular() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch("http://localhost:3000/api/list?top")
+    fetch("https://seetheworld-4ojo.onrender.com/api/list?top")
       .then((res) => res.json())
       .then((data) => {
       	setPlaces(data.data || []);

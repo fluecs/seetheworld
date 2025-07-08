@@ -14,7 +14,7 @@ export default function AllDest() {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch("http://localhost:3000/api/list")
+    fetch("https://seetheworld-4ojo.onrender.com/api/list")
       .then((res) => res.json())
       .then((data) => {
         setPlaces(data.data || []);
