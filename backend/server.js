@@ -14,4 +14,4 @@ app.use('/api/act', actRoute);
 app.use('/auth', authRoute);
 
 console.log('Starting server...');
-app.listen(3000, () => console.log('Server running at http://localhost:3000'));
+app.listen(8080, () => console.log('Server running at http://localhost:3000'));

@@ -1,6 +1,6 @@
 [
   {
-	"id": 1,
+    "id": 1,
     "username": "Hitler",
     "password": "",
     "role": "admin",
@@ -24,7 +24,16 @@
         "id": 1,
         "date": "2023-10-01"
       }
-	],
+    ],
     "createdAt": "2025-07-07T08:07:01.586Z"
+  },
+  {
+    "id": 3,
+    "username": "ilia1",
+    "password": "$2b$10$4Rr6HylR7Ib2gkTTbtJ5Vehqkwmfwtnk8pJnJUKlc5RfSUwDo98Ty",
+    "email": "ilciliadev@gmail.com",
+    "role": "user",
+    "booked": [],
+    "createdAt": "2025-07-07T10:31:04.657Z"
   }
 ]
