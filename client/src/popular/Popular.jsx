@@ -44,7 +44,7 @@ export default function Popular() {
               </span>
               <span className="info">
                 <FontAwesomeIcon icon={faCalendar} /> {place.days} days ⋅{" "}
-                <FontAwesomeIcon icon={faBuilding} /> {place.location}
+                <FontAwesomeIcon icon={faBuilding} /> {place.host}
               </span>
             </div>
           </Link>

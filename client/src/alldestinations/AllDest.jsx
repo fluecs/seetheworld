@@ -9,12 +9,22 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 import SearchAndFilterBar from "./SearchAndFilterBar";
+import { useSearchParams } from "react-router-dom";
 
 export default function AllDest() {
   const [places, setPlaces] = useState([]);
   const [loading, setLoading] = useState(true);
   const [searchValue, setSearchValue] = useState("");
-  const [sortOrder, setSortOrder] = useState("asc");
+  const [sortOrder, setSortOrder] = useState("recommended");
+  const [searchParams] = useSearchParams();
+
+  // Set searchValue from ?search= param on mount
+  useEffect(() => {
+    const searchParam = searchParams.get('search');
+    if (searchParam) {
+      setSearchValue(searchParam);
+    }
+  }, [searchParams]);
 
   useEffect(() => {
     fetch("https://seetheworld-4ojo.onrender.com/api/list")
@@ -34,8 +44,18 @@ export default function AllDest() {
     .sort((a, b) => {
       if (sortOrder === "asc") {
         return a.pricePerPerson - b.pricePerPerson;
-      } else {
+      } else if (sortOrder === "desc") {
         return b.pricePerPerson - a.pricePerPerson;
+      } else if (sortOrder === "oldest") {
+        return (a.id || 0) - (b.id || 0);
+      } else if (sortOrder === "newest") {
+        return (b.id || 0) - (a.id || 0);
+      } else {
+        // recommended: top=true first, then others
+        if (a.top === b.top) return 0;
+        if (a.top) return -1;
+        if (b.top) return 1;
+        return 0;
       }
     });
 
@@ -48,6 +68,13 @@ export default function AllDest() {
         onSearchChange={setSearchValue}
         sortOrder={sortOrder}
         onSortOrderChange={setSortOrder}
+        sortOptions={[
+          { value: "recommended", label: "Recommended" },
+          { value: "newest", label: "Newest" },
+          { value: "oldest", label: "Oldest" },
+          { value: "asc", label: "Price: Ascending" },
+          { value: "desc", label: "Price: Descending" }
+        ]}
       />
       <div className="section-divider"></div> 
 
@@ -71,7 +98,7 @@ export default function AllDest() {
               </span>
               <span className="info">
                 <FontAwesomeIcon icon={faCalendar} /> {place.days} days ⋅{" "}
-                <FontAwesomeIcon icon={faBuilding} /> {place.location}
+                <FontAwesomeIcon icon={faBuilding} /> {place.host}
               </span>
             </div>
           </Link>

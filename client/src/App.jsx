@@ -7,18 +7,23 @@ import Locations from "./location/Locations";
 import ActivitiesPage from "./pages/ActivitiesPage";
 import LoginPage from "./pages/LoginPage";
 import RegisterPage from "./pages/RegisterPage";
+import ViewPage from "./pages/ViewPage";
+import BookPage from "./pages/BookPage";
 
 export default function App() {
   return (
     <AuthProvider>
-      <Routes>
-        <Route path="/" element={ <Home /> } />
-        <Route path="/locations" element={ <Locations />} />
-        <Route path="/activities" element={ <ActivitiesPage />} />
-        <Route path="/login" element={ <LoginPage />} />
-        <Route path="/register" element={ <RegisterPage />} />
-        <Route path="/view" element={ <h1>Test</h1>} />
-      </Routes>
+      <div className="app-root">
+        <Routes>
+          <Route path="/" element={ <Home /> } />
+          <Route path="/locations" element={ <Locations />} />
+          <Route path="/activities" element={ <ActivitiesPage />} />
+          <Route path="/login" element={ <LoginPage />} />
+          <Route path="/register" element={ <RegisterPage />} />
+          <Route path="/view" element={ <ViewPage /> } />
+          <Route path="/book" element={ <BookPage /> } />
+        </Routes>
+      </div>
     </AuthProvider>
   )
 }

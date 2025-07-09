@@ -1,14 +1,15 @@
 [
   {
     "id": 1,
-    "username": "Hitler",
-    "password": "",
-    "role": "admin",
+    "username": "admin",
+    "password": "$2b$10$IjZyWbLjMOXUyo.x6h4Kh.10gJsNyvx8So3VyeuvcjOWvUMIbWDXm",
     "email": "ilciliadev@gmail.com",
+    "role": "admin",
     "booked": [
       {
         "id": 1,
-        "date": "2023-10-01"
+        "date": "2023-10-01",
+		"people": 2
       }
     ],
     "createdAt": "2025-07-07T08:07:01.586Z"
@@ -16,23 +17,9 @@
   {
     "id": 2,
     "username": "ilia",
-    "password": "$2b$10$IjZyWbLjMOXUyo.x6h4Kh.10gJsNyvx8So3VyeuvcjOWvUMIbWDXm",
-    "email": "ilciliadev@gmail.com",
-    "role": "admin",
-    "booked": [
-      {
-        "id": 1,
-        "date": "2023-10-01"
-      }
-    ],
-    "createdAt": "2025-07-07T08:07:01.586Z"
-  },
-  {
-    "id": 3,
-    "username": "ilia1",
     "password": "$2b$10$4Rr6HylR7Ib2gkTTbtJ5Vehqkwmfwtnk8pJnJUKlc5RfSUwDo98Ty",
     "email": "ilciliadev@gmail.com",
-    "role": "user",
+    "role": "admin",
     "booked": [],
     "createdAt": "2025-07-07T10:31:04.657Z"
   }

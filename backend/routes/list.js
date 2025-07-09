@@ -40,6 +40,7 @@ router.get('/list', (req, res) => {
 
 router.get('/place/:id', (req, res) => {
   let placesData = [];
+  let activitiesData = [];
 
   try {
     const rawData = fs.readFileSync(placesPath);
@@ -49,11 +50,29 @@ router.get('/place/:id', (req, res) => {
     return res.status(500).json({ error: 'Could not load data' });
   }
 
+  // Read activities.json
+  const activitiesPath = path.join(__dirname, '../data/activities.json');
+  try {
+    const activitiesRaw = fs.readFileSync(activitiesPath);
+    activitiesData = JSON.parse(activitiesRaw);
+  } catch (err) {
+    console.error('Error reading or parsing activities.json:', err.message);
+    return res.status(500).json({ error: 'Could not load activities data' });
+  }
+
   const placeId = req.params["id"];
   const place = placesData.find(p => String(p.id) === placeId);
 
   if (!place) {
     return res.status(404).json({ error: 'Place not found' });
+  }
+
+  // Transform activity IDs to names
+  if (Array.isArray(place.activities)) {
+    place.activities = place.activities.map(id => {
+      const activity = activitiesData.find(a => a.id === id);
+      return activity ? activity.name : id;
+    });
   }
 
   res.json(place);

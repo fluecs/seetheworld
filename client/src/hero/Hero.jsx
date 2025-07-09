@@ -46,7 +46,7 @@ export default function Hero() {
 
   return (
     <section id="home" className="hero">
-      <div class="glass-blur hero-sec"></div>
+      <div className="glass-blur hero-sec"></div>
       <div className="hero-container">
         <div className="hero-content">
           <h1>Discover Your Next Adventure</h1>

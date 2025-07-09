@@ -47,21 +47,21 @@ export const AuthProvider = ({ children }) => {
     }
   };
 
-  const login = async (email, password) => {
+  const login = async (username, password) => {
     try {
       const response = await fetch('https://seetheworld-4ojo.onrender.com/auth/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
         },
-        body: JSON.stringify({ email, password })
+        body: JSON.stringify({ username, password })
       });
 
       const data = await response.json();
 
       if (response.ok) {
         localStorage.setItem('token', data.token);
-        setUser(data.user);
+        await fetchProfile(data.token);
         return { success: true };
       } else {
         return { success: false, error: data.message || 'Login failed' };
@@ -86,7 +86,7 @@ export const AuthProvider = ({ children }) => {
 
       if (response.ok) {
         localStorage.setItem('token', data.token);
-        setUser(data.user);
+        await fetchProfile(data.token);
         return { success: true };
       } else {
         return { success: false, error: data.message || 'Registration failed' };

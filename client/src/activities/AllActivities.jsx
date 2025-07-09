@@ -27,7 +27,7 @@ export default function AllActivities() {
   }, []);
 
   return (
-    <section id="activities" class="activities darker">
+    <section id="activities" class="popular">
       <div class="glass-blur"></div>
       <h1 class="section-title">Activities</h1>
       <div class="section-divider"></div>
