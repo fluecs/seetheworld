@@ -94,61 +94,6 @@ router.get('/profile', (req, res) => {
   }
 });
 
-// 📅 Book a place
-router.post('/book', (req, res) => {
-  const authHeader = req.headers.authorization;
 
-  if (!authHeader) return res.status(401).json({ msg: 'No token provided' });
-
-  const token = authHeader.split(' ')[1];
-  let decoded;
-  
-  try {
-    decoded = jwt.verify(token, JWT_SECRET);
-  } catch (err) {
-    return res.status(403).json({ msg: 'Invalid or expired token' });
-  }
-
-  const { id, people, startDate, suite } = req.body;
-
-  // Validate required fields
-  if (!id || !people || !startDate || !suite) {
-    return res.status(400).json({ msg: 'Missing required fields: id, people, startDate, suite' });
-  }
-
-  // Validate data types
-  if (typeof people !== 'number' || people <= 0) {
-    return res.status(400).json({ msg: 'People must be a positive number' });
-  }
-
-  if (typeof startDate !== 'string' || !Date.parse(startDate)) {
-    return res.status(400).json({ msg: 'startDate must be a valid date string' });
-  }
-
-  const users = loadUsers();
-  const userIndex = users.findIndex(u => u.id === decoded.id);
-
-  if (userIndex === -1) {
-    return res.status(404).json({ msg: 'User not found' });
-  }
-
-  // Create booking object
-  const booking = {
-    id: parseInt(id),
-    people,
-    startDate,
-    suite,
-    bookedAt: new Date().toISOString()
-  };
-
-  // Add booking to user's booked array
-  users[userIndex].booked.push(booking);
-  saveUsers(users);
-
-  res.status(201).json({ 
-    msg: 'Booking successful', 
-    booking 
-  });
-});
 
 module.exports = router;
