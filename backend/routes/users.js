@@ -94,6 +94,61 @@ router.get('/profile', (req, res) => {
   }
 });
 
+// 📋 Get user's booked places
+router.get('/bookings', (req, res) => {
+  const authHeader = req.headers.authorization;
 
+  if (!authHeader) return res.status(401).json({ msg: 'No token provided' });
+
+  const token = authHeader.split(' ')[1];
+  let decoded;
+  
+  try {
+    decoded = jwt.verify(token, JWT_SECRET);
+  } catch (err) {
+    return res.status(403).json({ msg: 'Invalid or expired token' });
+  }
+
+  const users = loadUsers();
+  const user = users.find(u => u.id === decoded.id);
+
+  if (!user) {
+    return res.status(404).json({ msg: 'User not found' });
+  }
+
+  // Load places data to get place details
+  const placesPath = path.join(__dirname, '../data/places.json');
+  let placesData = [];
+  
+  try {
+    const rawData = fs.readFileSync(placesPath);
+    placesData = JSON.parse(rawData);
+  } catch (err) {
+    console.error('Error reading places.json:', err.message);
+    return res.status(500).json({ error: 'Could not load places data' });
+  }
+
+  // Enhance booking data with place details
+  const enhancedBookings = user.booked.map(booking => {
+    const place = placesData.find(p => p.id === String(booking.id));
+    return {
+      ...booking,
+      place: place ? {
+        id: place.id,
+        title: place.title,
+        imageURL: place.imageURL,
+        description: place.description,
+        rating: place.rating,
+        pricePerPerson: place.pricePerPerson
+      } : null
+    };
+  });
+
+  res.json({
+    msg: 'User bookings retrieved successfully',
+    bookings: enhancedBookings,
+    count: enhancedBookings.length
+  });
+});
 
 module.exports = router;
