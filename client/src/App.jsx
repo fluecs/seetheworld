@@ -9,6 +9,7 @@ import LoginPage from "./pages/LoginPage";
 import RegisterPage from "./pages/RegisterPage";
 import ViewPage from "./pages/ViewPage";
 import BookPage from "./pages/BookPage";
+import ActPage from "./pages/ActPage";
 
 export default function App() {
   return (
@@ -22,6 +23,7 @@ export default function App() {
           <Route path="/register" element={ <RegisterPage />} />
           <Route path="/view" element={ <ViewPage /> } />
           <Route path="/book" element={ <BookPage /> } />
+          <Route path="/act" element={ <ActPage /> } />
         </Routes>
       </div>
     </AuthProvider>

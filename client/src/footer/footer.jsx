@@ -4,10 +4,10 @@ const Footer = () => {
   return (
     <footer>
 <nav className="footer-nav">
-        <a href="/contacts">Contacts</a>
-        <a href="/destinations">Destinations</a>
-        <a href="/why-us">Why Us</a>
+        <a href="/">Home</a>
+        <a href="/locations">Destinations</a>
         <a href="/activities">Activities</a>
+        <a href="/meet">Meet the Teams</a>
       </nav>
 
 <div className="footer-box">
