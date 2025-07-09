@@ -353,8 +353,6 @@ bold {
 	display: flex;
 	width: 100%;
 	max-width: 100rem;
-	left: 50%;
-	transform: translateX(-50%);
 	position: relative;
 	justify-content: center;
 	align-items: start;
