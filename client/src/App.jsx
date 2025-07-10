@@ -11,7 +11,6 @@ import ViewPage from "./pages/ViewPage";
 import BookPage from "./pages/BookPage";
 import ActPage from "./pages/ActPage";
 import BookingsPage from "./pages/BookingsPage";
-import Team from "./team/Team";
 
 export default function App() {
   return (
@@ -27,7 +26,7 @@ export default function App() {
           <Route path="/book" element={ <BookPage /> } />
           <Route path="/act" element={ <ActPage /> } />
           <Route path="/bookings" element={ <BookingsPage /> } />
-          <Route path="/team" element={ <Team /> } />
+          <Route path="/team" element={ <BookingsPage /> } />
         </Routes>
       </div>
     </AuthProvider>
