@@ -7,7 +7,7 @@ const Footer = () => {
         <a href="/">Home</a>
         <a href="/locations">Destinations</a>
         <a href="/activities">Activities</a>
-        <a href="/meet">Meet the Teams</a>
+        <a href="/team">Meet the Teams</a>
       </nav>
 
 <div className="footer-box">

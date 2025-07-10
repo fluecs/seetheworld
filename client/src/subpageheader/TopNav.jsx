@@ -21,7 +21,9 @@ export default function TopNav() {
         <div className="nav-right">
           {user ? (
             <div className="user-section">
-              <span className="username">{user.username}</span>
+              <Link to="/bookings" className="auth-button view-bookings-button">
+                View Bookings
+              </Link>
               <button onClick={handleLogout} className="auth-button logout-button">
                 Logout
               </button>

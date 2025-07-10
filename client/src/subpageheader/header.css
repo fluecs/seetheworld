@@ -141,7 +141,7 @@ a {
 .logout-button {
   background-color: #e74c3c;
   color: white;
-  margin-left: 1rem;
+  margin-left: 0rem;
 }
 
 .logout-button:hover {
@@ -151,7 +151,7 @@ a {
 .user-section {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: .25rem;
 }
 
 .username {

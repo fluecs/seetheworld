@@ -10,6 +10,7 @@ import RegisterPage from "./pages/RegisterPage";
 import ViewPage from "./pages/ViewPage";
 import BookPage from "./pages/BookPage";
 import ActPage from "./pages/ActPage";
+import BookingsPage from "./pages/BookingsPage";
 
 export default function App() {
   return (
@@ -24,6 +25,7 @@ export default function App() {
           <Route path="/view" element={ <ViewPage /> } />
           <Route path="/book" element={ <BookPage /> } />
           <Route path="/act" element={ <ActPage /> } />
+          <Route path="/bookings" element={ <BookingsPage /> } />
         </Routes>
       </div>
     </AuthProvider>

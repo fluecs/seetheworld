@@ -1,13 +1,23 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 import "./header.css";
 
 export default function TopNav() {
   const { user, logout } = useAuth();
+  const location = useLocation();
 
   const handleLogout = () => {
     logout();
+  };
+
+  const scrollToSection = (sectionId) => {
+    if (location.pathname === '/') {
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
   };
 
   return (
@@ -17,23 +27,25 @@ export default function TopNav() {
           <Link className="navbutton" to="/">
             <img src="/logo.png" alt="Logo" />
           </Link>
-          <Link className="navbutton textbutton" to="#aboutus">
+          <button className="navbutton textbutton" onClick={() => scrollToSection('home')}>
             <p>Why Choose Us</p>
-          </Link>
-          <Link className="navbutton textbutton" to="#destinations">
+          </button>
+          <button className="navbutton textbutton" onClick={() => scrollToSection('destinations')}>
             <p>Destinations</p>
-          </Link>
-          <Link className="navbutton textbutton" to="#activities">
+          </button>
+          <button className="navbutton textbutton" onClick={() => scrollToSection('activities')}>
             <p>Activities</p>
-          </Link>
-          <Link className="navbutton textbutton" to="#contact">
+          </button>
+          <button className="navbutton textbutton" onClick={() => scrollToSection('contact')}>
             <p>Contact</p>
-          </Link>
+          </button>
         </div>
         <div className="nav-right">
           {user ? (
             <div className="user-section">
-              <span className="username">{user.username}</span>
+              <Link to="/bookings" className="auth-button view-bookings-button">
+                View Bookings
+              </Link>
               <button onClick={handleLogout} className="auth-button logout-button">
                 Logout
               </button>

@@ -139,7 +139,8 @@ router.get('/bookings', (req, res) => {
         imageURL: place.imageURL,
         description: place.description,
         rating: place.rating,
-        pricePerPerson: place.pricePerPerson
+        pricePerPerson: place.pricePerPerson,
+		days: place.days
       } : null
     };
   });

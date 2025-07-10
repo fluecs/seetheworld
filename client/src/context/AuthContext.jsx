@@ -102,11 +102,36 @@ export const AuthProvider = ({ children }) => {
     setUser(null);
   };
 
+  const fetchBookings = async () => {
+    const token = localStorage.getItem('token');
+    if (!token) return { success: false, error: 'No token' };
+    
+    try {
+      const response = await fetch('https://seetheworld-4ojo.onrender.com/auth/bookings', {
+        headers: {
+          'Authorization': `Bearer ${token}`,
+          'Content-Type': 'application/json'
+        }
+      });
+      
+      if (response.ok) {
+        const data = await response.json();
+        return { success: true, bookings: data.bookings || [] };
+      } else {
+        return { success: false, error: 'Failed to fetch bookings' };
+      }
+    } catch (error) {
+      console.error('Error fetching bookings:', error);
+      return { success: false, error: 'Network error' };
+    }
+  };
+
   const value = {
     user,
     login,
     register,
     logout,
+    fetchBookings,
     loading
   };
 

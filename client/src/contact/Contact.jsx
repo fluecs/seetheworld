@@ -15,7 +15,7 @@ export default function Contact() {
       <div class="section-divider"></div>
       <div class="contact-content">
         <div class="contact-info">
-          <h3>Connect to our staff</h3>
+          <h3 style={{textAlign: 'center'}}>Connect to our staff</h3>
           <p>
             Need help with the site or have a question about your booking? Our team is here to assist you! Whether you need support with a booking issue, payment problem, or just want to share your travel dreams, we're just a message away.
           </p>
@@ -26,7 +26,7 @@ export default function Contact() {
               </i>
               <div>
                 <h4>Phone</h4>
-                <p>+40 630057047</p>
+                <p>+359 98 833 4413</p>
               </div>
             </div>
             <div class="contact-item">
@@ -35,7 +35,7 @@ export default function Contact() {
               </i>
               <div>
                 <h4>Email</h4>
-                <p>info@seetheworld.com</p>
+                <p>ilciliadev@gmail.com</p>
               </div>
             </div>
             <div class="contact-item">
@@ -44,56 +44,10 @@ export default function Contact() {
               </i>
               <div>
                 <h4>Address</h4>
-                <p>Calea Circumvalațiunii 1, Timișoara 300013, Romania</p>
+                <p>Sofia 1700, Akad. Stefan Mladenov Street, №1</p>
               </div>
             </div>
           </div>
-        </div>
-        <div class="contact-form">
-          <form id="contactForm">
-            <div class="form-group">
-              <input
-                type="text"
-                id="name"
-                name="name"
-                placeholder="Your Name"
-                required
-              />
-            </div>
-            <div class="form-group">
-              <input
-                type="email"
-                id="email"
-                name="email"
-                placeholder="Your Email"
-                required
-              />
-            </div>
-            <div class="form-group">
-              <select id="problem" name="problem" required>
-                <option value="" selected disabled hidden>
-                  Select a reason
-                </option>
-                <option value="booking">Booking Issue</option>
-                <option value="payment">Payment Problem</option>
-                <option value="cancellation">Cancellation/Refund</option>
-                <option value="website">Website Bug or Error</option>
-                <option value="suggestion">Suggestion/Improvement</option>
-                <option value="other">Other</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <textarea
-                id="message"
-                name="message"
-                placeholder="In detail, describe your issue or question"
-                rows="5"
-              ></textarea>
-            </div>
-            <button type="submit" class="submit-button">
-              Send Message
-            </button>
-          </form>
         </div>
       </div>
       <div class="section-divider"></div>

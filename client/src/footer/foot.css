@@ -14,9 +14,7 @@ footer {
 .footer-nav {
 	display: flex;
 	justify-content: center;
-	gap: 7rem;
 	margin-bottom: 2rem;
-	margin-top: 1rem;
 }
 
 .footer-nav a {
@@ -24,8 +22,8 @@ footer {
 	text-decoration: none;
 	font-weight: 500;
 	transition: all 200ms ease-in-out;
-
-
+	padding: 1rem;
+	padding-inline: 2.5rem;
 }
 
 .footer-nav a:hover {
