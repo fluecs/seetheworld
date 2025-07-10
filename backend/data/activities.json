@@ -8,7 +8,7 @@
   {
 	"id": 2,
     "name": "Skiing",
-	"img": "https://upload.wikimedia.org/wikipedia/commons/8/84/Ski_Famille_-_Family_Ski_Holidays.jpg",
+	"img": "skiing.png",
 	"top": true
   },
   {
@@ -20,7 +20,19 @@
   {
 	"id": 4,
     "name": "Surfing",
-	"img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRmZw7n2BKo-6r7RBYdXzqdYADkppJqQKLNwA&s",
+	"img": "surfing.png",
+	"top": false
+  },
+	{
+	"id": 5,
+    "name": "Zip-lining",
+	"img": "https://caveofthewinds.com/wp-content/uploads/2019/07/Ziplining-2.jpg",
+	"top": false
+  },
+  {
+	"id": 6,
+	"name": "Horseback Riding",
+	"img": "https://hipicarueda.es/wp-content/uploads/2025/02/Escuela-de-equitacion-Hipica-Rueda-Naquera-768x1365.jpg",
 	"top": false
   }
 ]

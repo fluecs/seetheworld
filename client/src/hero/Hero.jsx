@@ -3,6 +3,7 @@ import "../App.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { AnimatePresence, motion } from "framer-motion";
+import { useNavigate } from "react-router-dom";
 
 const cardData = [
   {
@@ -34,6 +35,8 @@ const cardData = [
 
 export default function Hero() {
   const [index, setIndex] = useState(0);
+  const [searchValue, setSearchValue] = useState("");
+  const navigate = useNavigate();
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -60,13 +63,20 @@ export default function Hero() {
               better, smarter, and with confidence.
             </p>
           </div>
-          <form id="searchForm" className="hero-search-bar">
+          <form id="searchForm" className="hero-search-bar" onSubmit={e => {
+            e.preventDefault();
+            if (searchValue.trim()) {
+              navigate(`/locations?search=${encodeURIComponent(searchValue.trim())}`);
+            }
+          }}>
             <input
               type="text"
               id="searchInput"
               name="search"
               placeholder="Book a place"
               required
+              value={searchValue}
+              onChange={e => setSearchValue(e.target.value)}
             />
             <button type="submit" className="search-btn">
               {/* Placeholder for search icon */}
