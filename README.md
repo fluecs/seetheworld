@@ -56,12 +56,16 @@ A modern travel booking platform to discover, explore, and book unique destinati
 
 ---
 
+## Backend
+It is hosted on Render.com.
+
+---
+
 ## Authentication
 
 SeeTheWorld uses a secure authentication system:
 - **Register** with username, email, and password
 - **Login** with your credentials
-- **Persistent sessions** (stay logged in across visits)
 - **Protected routes** (bookings and personal info only for logged-in users)
 
 For more details, see [`AUTHENTICATION.md`](./AUTHENTICATION.md).
